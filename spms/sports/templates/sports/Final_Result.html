@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <script
+      src="https://kit.fontawesome.com/15e17f45fd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        background-color: aliceblue;
+      }
+      table,
+      tr,
+      th,
+      td {
+        /* <!-- border: 1px solid black; --> */
+        border-collapse: collapse;
+        text-align: center;
+      }
+      tr:hover {
+        background-color: rgb(205, 174, 235);
+      }
+      th {
+        font-size: larger;
+      }
+      table {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  
+  
+  <body class="p-3">
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/Final_Result.js"></script>
+    <div class="button" onmousedown="party.confetti(this)">
+      <h1 class="bg-primary text-white py-3 text-center">
+        Recent Final Result of All Games
+      </h1>
+  
+      <table class="table table-bordered table-striped">
+  
+        <thead>
+          <tr class="table-primary">
+            <th >Games Name</th>
+            <th>Winner <i class="fa-sharp fa-solid fa-crown"></i></th>
+            <th>Score</th>
+            <th>Runner-up</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr>
+            <td>Cricket</i></td>
+            <td>Team A</td>
+            <td>Win By 6 Runs</td>
+            <td>Team B</td>
+          </tr>
+          <tr>
+            <td>Football</td>
+            <td>Team C</td>
+            <td>2 : 1</td>
+            <td>Team D</td>
+          </tr>
+          <tr>
+            <td>Bedminton</td>
+            <td>Team X</td>
+            <td>2 : 0</td>
+            <td>Team Y</td>
+          </tr>
+          <tr>
+            <td>Table Tennis</td>
+            <td>Team E</td>
+            <td>3 : 0</td>
+            <td>Team F</td>
+          </tr>
+          <tr>
+            <td>Voley Ball</td>
+            <td>Team I</td>
+            <td>3 : 0</td>
+            <td>Team Z</td>
+          </tr>
+          <tr>
+            <td>Race</td>
+            <td>Team Q</td>
+            <td>1.20(m) : 1.25(m)</td>
+            <td>Team W</td>
+          </tr>
+          <tr>
+            <td>Sprint</td>
+            <td>Team R</td>
+            <td>2.20(m) : 3.25(m)</td>
+            <td>Team E</td>
+          </tr>
+          <tr>
+            <td>chess</td>
+            <td>Team T</td>
+            <td>3:0</td>
+            <td>Team A</td>
+          </tr>
+          <tr>
+            <td>Snookers</td>
+            <td>Team O</td>
+            <td>4 : 1</td>
+            <td>Team P</td>
+          </tr>
+          <tr>
+            <td>Swim</td>
+            <td>Team Y</td>
+            <td>2.10(m) : 2.55(m)</td>
+            <td>Team F</td>
+          </tr>
+          <tr>
+            <td>Weight</td>
+            <td>Team X</td>
+            <td>100(kg) : 80(kg)</td>
+            <td>Team Y</td>
+          </tr>
+          <tr>
+            <td>Hockey</td>
+            <td>Team C</td>
+            <td>3 : 0</td>
+            <td>Team A</td>
+          </tr>
+          <tr>
+            <td>High Jump</td>
+            <td>Team V</td>
+            <td>2.25(m) : 1.75(m)</td>
+            <td>Team Y</td>
+          </tr>
+          <tr>
+            <td>Long Jump</td>
+            <td>Team N</td>
+            <td>225(cm) : 175(cm)</td>
+            <td>Team M</td>
+          </tr>
+          <tr>
+            <td>Kabadi</td>
+            <td>Team T</td>
+            <td>35 : 25</td>
+            <td>Team A</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+    <script>
+      party.confetti(runButton, {
+        count: party.variation.range(20, 40),
+      });
+    </script>
+    <!-- <script>
+      const startit = () => {
+        setTimeout(function () {
+          console.log("start");
+          startConfetti();
+        }, 1000);
+      };
+
+      const stopit = () => {
+        setTimeout(function () {
+          console.log("stop");
+          stopConfetti();
+        }, 6000);
+      };
+      confetti.gradient = false;
+      startit();
+      stopit();
+    </script>
+
+    <script src="confetti.js"></script> -->
+
+  </body>
+</html>
