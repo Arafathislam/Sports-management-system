@@ -8,7 +8,17 @@ def home(request):
     return render(request,'sports/index.html',context)
 
 def about(request):
-    contxt={}
+    context={}
     return render(request,'sports/about.html',context)
+
+def AllCards(request):
+    context={}
+    return render(request,'sports/AllCards.html',context)
+
+def admindashboard(request):
+    context={}
+    return render(request,'sports/admindashboard.html',context)
+
+
 
 
