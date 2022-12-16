@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -65,7 +66,7 @@
   </style>
 
   <!-- ----------------Body------------ -->
-  <body>
+ {%block content%}
 
     <!-- ------------Date and Clock------------- -->
     <div>
@@ -128,7 +129,7 @@
         </div>    
           </div>
         
-        <img class="img"  src="images/logo.png" />
+        <img class="img"  src="{%static 'images/logo.png'%}" />
 
         <!-------------- Card ------------ -->
 
@@ -198,5 +199,4 @@
       }
       showCustomDayAndMonth();
     </script>
-  </body>
-</html>
+{%endblock%}

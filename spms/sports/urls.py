@@ -8,6 +8,13 @@ urlpatterns = [
     path('news/',views.news,name="news"),
     path('register/',views.registration,name="register"),
     path('login/',views.login,name="login"),
+    path('mail/',views.mail,name="mail"),
+    path('contact/',views.contact,name="contact"),
+    path('finalresult/',views.finalresult,name="finalresult"),
+    path('tournament/',views.tournament,name="tournament"),
+    path('teaminfo/',views.teaminfo,name="teaminfo"),
+    path('allcard/',views.allcard,name="allcard"),
+    path('admindash/',views.admindashboard,name="admindash"),
 
 
 ]

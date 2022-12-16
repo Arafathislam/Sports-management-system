@@ -1,0 +1,47 @@
+.container {
+    margin: auto;
+    margin-top: 80px;
+    padding: 50px;
+    border: 3px solid rgb(0, 0, 0);
+    height: 350px;
+    border-radius: 35px;
+    width: 700px;
+    height: 300px;
+    align-self: center;
+}
+
+.left {
+    float: left;
+    width: 20%;
+    height: 250px;
+    padding: 20px 20px;
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 35px;
+}
+
+.left img {
+    height: 50%;
+}
+
+.left p {
+    padding-top: 40px;
+    font-size: 25px;
+}
+
+.right {
+    float: right;
+    width: 65%;
+    height: 300px;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.right p {
+    font-size: 23px;
+    text-align: justify;
+}
+
+.right p span {
+    text-decoration: underline;
+}
