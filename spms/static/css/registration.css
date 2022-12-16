@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman';
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vb;
+    background-color: rgb(43, 43, 43);
+}
+
+.Container {
+    max-width: 700px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(34, 34, 34, 0.2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+    align-items: center;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+    background-color: rgb(92, 1, 1);
+    border-radius: 5px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.input-box label,
+.gender-title {
+    width: 95%;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.gender-title {
+    font-size: 16px;
+}
+
+.input-box input {
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.input-box input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(34, 34, 34, 0.2);
+}
+
+.gender-category label {
+    padding: 0 20px 0 5px;
+    font-size: 14px;
+}
+
+.gender-category {
+    color: gainsboro;
+}
+
+.gender-category label,
+.gender-category input {
+    cursor: pointer;
+}
+
+.alert p {
+    font-size: 14px;
+    font-style: italic;
+    padding: 10px;
+    color: #fff;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.button-container {
+    margin: 15px 0;
+}
+
+.button-container button {
+    width: 640px;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-style: bold;
+    background-color: rgb(75, 0, 0);
+    cursor: pointer;
+    transition: 0.3%;
+}
+
+.button-container button {
+    background-image: linear-gradient(to right, rgb(58, 0, 0), rgb(10, 10, 10));
+}
+
+@media(max-width:600px) {
+    .Container {
+        min-width: 280px;
+    }
+    .content {
+        max-height: 380px;
+        overflow: auto;
+    }
+    .input-box {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .input-box:nth-child(2n) {
+        justify-content: space-between;
+    }
+    .gender-category {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+    .content::-webkit-scrollbar {
+        width: 0;
+    }
+}

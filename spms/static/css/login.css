@@ -1,0 +1,76 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    text-align: center;
+    border-bottom: 2px solid black;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.container_1{
+    background-color: rgb(147, 223, 145);
+    width: 500px;
+    height: 150px;
+    padding: 70px;
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.lbl_1{
+    background-color: white;
+    color: blcak;
+    border: 3px solid #73AD21;
+    border-radius: 5px;
+    width: 200px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.lbl_2{
+    background-color: white;
+    color: blcak;
+    border: 3px solid #73AD21;
+    border-radius: 5px;
+    width: 200px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    border: 3px solid #73AD21;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+}
+button{
+    background-color: white;
+    color: blcak;
+    border: 3px solid #73AD21;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#login_btn{
+
+    margin-left: 200px;
+    
+}
