@@ -343,9 +343,9 @@
                 </div>
                 <p>Don't have an account ?</p><br>
                 
-                <a href='/registerAccount' style="background-color:brown;color:white; padding:5px;
+                <a href="{%url 'registerAccount' %}"style="background-color:brown;color:white; padding:5px;
                 margin-left:40%; border-radius:10px; text-decoration:none;">Register</a>
-                <p class="login">Do you Forgot your Password?<a href="/forgotpass">Forgot pass</a></p>
+                <p class="login">Do you Forgot your Password?<a href="{%url 'forgotpass' %}">Forgot pass</a></p>
                 
             </div>
         </form>
@@ -356,7 +356,7 @@
 
     </section>
 
-    {{form}}
+
 
 
 </body>
