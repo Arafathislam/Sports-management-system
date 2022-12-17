@@ -322,17 +322,17 @@
                 <a href="#" class="text-btn">Get Started</a>
             </div>
 
-
+            <form method="POST" action="">
+               
             <div class="form">
                 <h3>Login Page</h3>
 
                 <br>
                 <br>
                 <p>Login with your Student ID</p>
-
                 <div class="input">
                     <div class="inputBox">
-                        <input type="Number" name="" placeholder="Student ID">
+                        <input  name="" placeholder="Student ID">
                     </div>
                     <div class="inputBox">
                         <input type="password" name="" placeholder="">
@@ -341,9 +341,12 @@
                         <input type="submit" name="" value="Log-in">
                     </div>
                 </div>
+                <p>Don't have an account ?</p><br>
+                <a href='/registration'>Register</a>
                 <p class="login">Do you Forgot your Password?<a href="/forgotpass">Forgot pass</a></p>
-
+                
             </div>
+        </form>
 
 
         </div>
@@ -351,7 +354,11 @@
 
     </section>
 
+    {{form}}
+
 
 </body>
 
 </html>
+
+
