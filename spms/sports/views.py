@@ -18,7 +18,13 @@ def forgotpass(request):
     return render(request,'sports/forgotpass.html')
 
 def registerAccount(request):
-    form=CreateUserForm()
+    form=CreateUserForm(request.POST)
+
+    if request.method== 'POST':
+        form=CreateUserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
     context={'form':form}
     return render(request,'sports/registerAccount.html',context)
 
