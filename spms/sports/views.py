@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from django.contrib.auth import authenticate,login,logout
 # Create your views here.
 from .models import *
 from .forms import CreateUserForm
@@ -12,7 +13,15 @@ def home(request):
 def about(request):
     return render(request,'sports/about.html')
 
-def login(request):
+def loginPage(request):
+    if request.method=='POST':
+        username=request.POST.get('username')
+        password=request.POST.get('password')
+
+        user=authenticate(request,username=username,password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('home')
     return render(request,'sports/login.html')
 
 def forgotpass(request):
@@ -27,7 +36,7 @@ def registerAccount(request):
             form.save()
             user=form.cleaned_data.get('username')
             messages.success(request,'account was created for'+ user)
-            return redirect('login')
+            return redirect('loginPage')
     context={'form':form}
     return render(request,'sports/registerAccount.html',context)
 
