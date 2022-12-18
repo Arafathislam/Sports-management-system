@@ -362,14 +362,16 @@
                         <input type="submit" value="Log-in">
                     </div>
                 </div>
+                {%if messages%}
                 {%for message in messages %}
                 <p id="messages">{{message}}</p>
                 {% endfor %}
-                <p>Don't have an account ?</p><br>
+                {% endif %}
+                <p style="margin: 5px;">Don't have an account ?</p><br>
                 
                 <a href="{%url 'registerAccount' %}"style="background-color:brown;color:white; padding:5px;
                 margin-left:40%; border-radius:10px; text-decoration:none;">Register</a>
-                <p class="login">Do you Forgot your Password?<a href="{%url 'forgotpass' %}">Forgot pass</a></p>
+                <p style="margin-bottom: 8px;" class="login">Did you Forgot your Password?<a href="{%url 'forgotpass' %}">Forgot pass</a></p>
                 
             </div>
         </form>
