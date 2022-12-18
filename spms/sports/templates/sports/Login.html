@@ -280,6 +280,24 @@
                 left: 188px;
                 top: 200px
             }
+            #messages{
+                border: 1px solid black;
+                padding: 3px;
+                width: 60%;
+                margin: 15px auto;
+                animation: change 2s infinite;
+            }
+            @keyframes change {
+                0%{
+                    background-color: rgb(53, 15, 15);
+                }
+                50%{
+                    background-color: rgb(196, 104, 50);
+                }
+                100%{
+                    background-color: wheat;
+                }
+            }
         }
         
         @media screen and (max-width:375px) {
@@ -341,6 +359,9 @@
                         <input type="submit" name="" value="Log-in">
                     </div>
                 </div>
+                {%for message in messages %}
+                <p>{{message}}</p>
+                {% endfor %}
                 <p>Don't have an account ?</p><br>
                 
                 <a href="{%url 'registerAccount' %}"style="background-color:brown;color:white; padding:5px;

@@ -35,7 +35,7 @@ def registerAccount(request):
         if form.is_valid():
             form.save()
             user=form.cleaned_data.get('username')
-            messages.success(request,'account was created for'+ user)
+            messages.success(request,'account was created for '+ user)
             return redirect('loginPage')
     context={'form':form}
     return render(request,'sports/registerAccount.html',context)
