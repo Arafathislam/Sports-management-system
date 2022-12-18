@@ -22,6 +22,8 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('home')
+        else:
+            messages.info(request,'Incorrect username or password')
     return render(request,'sports/login.html')
 
 def forgotpass(request):
