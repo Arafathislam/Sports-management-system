@@ -18,7 +18,27 @@
             box-sizing: border-box;
             font-style: normal;
         }
-        
+        #messages{
+            border: 1px solid black;
+            padding: 3px;
+            width: 60%;
+            margin: 15px auto;
+            animation: change ease 1s infinite;
+            color: rgb(78, 19, 19);
+            font-weight: 600;
+            font-size: 20px;
+        }
+        @keyframes change {
+            20%{
+                background-color: rgb(53, 15, 15);
+            }
+            50%{
+                background-color: rgb(196, 104, 50);
+            }
+            100%{
+                background-color: wheat;
+            }
+        }
         body {
             margin: 0;
             padding: 0;
@@ -298,24 +318,7 @@
                 left: 188px;
                 top: 200px
             }
-            #messages{
-                border: 1px solid black;
-                padding: 3px;
-                width: 60%;
-                margin: 15px auto;
-                animation: change 2s infinite;
-            }
-            @keyframes change {
-                0%{
-                    background-color: rgb(53, 15, 15);
-                }
-                50%{
-                    background-color: rgb(196, 104, 50);
-                }
-                100%{
-                    background-color: wheat;
-                }
-            }
+           
         }
         
         @media screen and (max-width:375px) {
@@ -368,13 +371,13 @@
                 <p>Login with your Student ID</p>
                 <div class="input">
                     <div class="inputBox">
-                        <input  name="" placeholder="Student ID">
+                        <input  name="username" placeholder="Student ID">
                     </div>
                     <div class="inputBox">
-                        <input type="password" name="" placeholder="password">
+                        <input type="password" name="password" placeholder="password">
                     </div>
                     <div class="inputBox">
-                        <input type="submit" name="" value="Log-in">
+                        <input type="submit" value="Log-in">
                     </div>
                 </div>
 <<<<<<< HEAD
@@ -384,7 +387,7 @@
                 <p style="margin-bottom: 5px;">Don't have an account ?</p><br>
 =======
                 {%for message in messages %}
-                <p>{{message}}</p>
+                <p id="messages">{{message}}</p>
                 {% endfor %}
                 <p>Don't have an account ?</p><br>
 >>>>>>> authentication

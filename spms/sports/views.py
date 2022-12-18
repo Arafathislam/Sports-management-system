@@ -24,7 +24,6 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('home')
->>>>>>> authentication
     return render(request,'sports/login.html')
 
 def forgotpass(request):
