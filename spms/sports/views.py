@@ -12,7 +12,7 @@ def home(request):
 def about(request):
     return render(request,'sports/about.html')
 
-def login(request):
+def loginPage(request):
     return render(request,'sports/login.html')
 
 def forgotpass(request):
