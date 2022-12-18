@@ -39,10 +39,14 @@ def registerAccount(request):
             form.save()
             user=form.cleaned_data.get('username')
 <<<<<<< HEAD
+<<<<<<< HEAD
             messages.success(request,'account was created for '+ user)
             return redirect('login')
 =======
             messages.success(request,'account was created for'+ user)
+=======
+            messages.success(request,'account was created for '+ user)
+>>>>>>> authentication
             return redirect('loginPage')
 >>>>>>> authentication
     context={'form':form}
