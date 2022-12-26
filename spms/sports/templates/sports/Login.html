@@ -19,11 +19,10 @@
             font-style: normal;
         }
         #messages{
-            border: 1px solid black;
             padding: 3px;
             width: 60%;
             margin: 15px auto;
-            animation: change ease 1s infinite;
+            animation: change 1s ease-out  5  alternate-reverse;       
             color: rgb(78, 19, 19);
             font-weight: 600;
             font-size: 20px;
@@ -37,6 +36,7 @@
             }
             100%{
                 background-color: wheat;
+                border: none;
             }
         }
         body {
@@ -380,21 +380,14 @@
                         <input type="submit" value="Log-in">
                     </div>
                 </div>
-<<<<<<< HEAD
-                {% for message in messages %}
-                    <p id="messages">{{message}}</p>
-                {% endfor %}
-                <p style="margin-bottom: 5px;">Don't have an account ?</p><br>
-=======
                 {%for message in messages %}
                 <p id="messages">{{message}}</p>
                 {% endfor %}
                 <p>Don't have an account ?</p><br>
->>>>>>> authentication
                 
                 <a href="{%url 'registerAccount' %}"style="background-color:brown;color:white; padding:5px;
                 margin-left:40%; border-radius:10px; text-decoration:none;">Register</a>
-                <p class="login">Do you Forgot your Password?<a href="{%url 'forgotpass' %}">Forgot pass</a></p>
+                <p style="margin-bottom: 8px;" class="login">Did you Forgot your Password?<a href="{%url 'forgotpass' %}">Forgot pass</a></p>
                 
             </div>
         </form>

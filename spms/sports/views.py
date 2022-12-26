@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 # Create your views here.
 from .models import *
-from .forms import CreateUserForm
+from .forms import CreateUserForm,LoginForm
 
 def home(request):
     return render(request,'sports/index.html')
@@ -14,6 +14,7 @@ def about(request):
     return render(request,'sports/about.html')
 
 def loginPage(request):
+    loginform=LoginForm(request.POST)
     if request.method=='POST':
         username=request.POST.get('username')
         password=request.POST.get('password')
@@ -22,6 +23,7 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('home')
+
     return render(request,'sports/login.html')
 
 def forgotpass(request):
