@@ -14,8 +14,6 @@ def about(request):
     return render(request,'sports/about.html')
 
 def loginPage(request):
-<<<<<<< HEAD
-=======
     if request.method=='POST':
         username=request.POST.get('username')
         password=request.POST.get('password')
@@ -37,17 +35,8 @@ def registerAccount(request):
         if form.is_valid():
             form.save()
             user=form.cleaned_data.get('username')
-<<<<<<< HEAD
-<<<<<<< HEAD
             messages.success(request,'account was created for '+ user)
             return redirect('login')
-=======
-            messages.success(request,'account was created for'+ user)
-=======
-            messages.success(request,'account was created for '+ user)
->>>>>>> authentication
-            return redirect('loginPage')
->>>>>>> authentication
     context={'form':form}
     return render(request,'sports/registerAccount.html',context)
 
