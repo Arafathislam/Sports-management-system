@@ -15,6 +15,7 @@ urlpatterns = [
     path('teaminfo/',views.teaminfo,name="teaminfo"),
     path('allcard/',views.allcard,name="allcard"),
     path('admindash/',views.admindashboard,name="admindash"),
+    path('payment/',views.payment,name="payment"),
 
 
 ]
