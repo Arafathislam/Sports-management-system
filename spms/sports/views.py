@@ -28,8 +28,7 @@ def loginPage(request):
             return redirect('loginPage')
     return render(request,'sports/login.html')
 
-def forgotpass(request):
-    return render(request,'sports/forgotpass.html')
+
 
 def registerAccount(request):
     form=CreateUserForm(request.POST)
